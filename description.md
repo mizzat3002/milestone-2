@@ -1,37 +1,38 @@
-# Judul Project
+# Stroke Prediction 
 
 ## Repository Outline
-`Bagian ini menjelaskan secara singkat konten/isi dari file yang dipush ke repository`
 
-Contoh:
-```
 1. README.md - Penjelasan gambaran umum project
-2. notebook.ipynb - Notebook yang berisi pengolahan data dengan python
-dst.
-```
+2. P1M2_muhammad_izzat.ipynb - Notebook utama berisi EDA, preprocessing, training, dan evaluasi model
+3. P1M2_muhammad_izzat_inf.ipynb - Notebook inference untuk mencoba prediksi menggunakan model yang sudah disimpan
+4. model_stroke.pkl - File model Random Forest terbaik hasil Hyperparameter Tuning
+5. stroke_data.csv - Dataset rekam medis pasien yang digunakan untuk training
 
 ## Problem Background
-`Bagian ini menjelaskan masalah yang diselesaikan pada project ini beserta latar belakang masalahnya secara singkat`
+Stroke adalah salah satu penyebab kematian terbesar di indonesia. deteksi dini sangat penting agar pasien yang berisiko bisa mendapat penanganan lebi cepet. project ini membangun model klasifikasi untuk memprediksi apakah seseorang berisiko terkena stroke 
 
 ## Project Output
-`Bagian ini menjelaskan secara singkat output projectnya apa, misal model machine learning, dasboard, dsb.`
+Ouput berupa model klasifikasi random forest yang bisa memprediksi apakah seseorang berisiko stroke atau tidak, disimpan dalam file model_stroke.pkl.
 
 ## Data
-`Bagian ini menjelaskan secara singkat mengenai data yang digunakan seperti sumber data, deskripsi singkat karakteristik data seperti jumlah kolom, baris data, missing values, dsb`
+Dataset rekam medis 5.110 pasien dari Kaggle. ada 12 kolom mulai dari usia, BMI, kadar gula darah, sampai status merokok. dari seluruh data, cuma sekitar 5% pasien yang positif stroke, jadi datanya tidak seimbang
 
 ## Method
-`Bagian ini menjelaskan metode yang digunakan pada project, misal project ini mengenai machine learning sehingga metode yang dipakai adalah model supervised learning dengan model KNN`
+supervised learning - binary classification menggunakan 5 algoritma:
+
+semua  model dibangun pakai pipeline, dievaluasi pakai cross validation dengan metric f1 score, lalu dituning pakai gridsearch. Random Forest keluar sebagai model terbaik dengan recall 74% setelah tuning.
 
 ## Stacks
-`Bagian ini menjelaskan stacks yang digunakan seperti bahasa pemrograman, tools, dan library Python yang digunakan`
+Bahasa : python
+Library ; Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Joblib
 
 ## Reference
-`Bagian ini berisi link pendukung seperti referensi, dashboard, atau deployment`
+https://huggingface.co/spaces/mizzat3002/Stroke-Prediction
+
+https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+
+https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index
+
+https://www.childrenshospital.org/conditions-treatments/neonatal-stroke
 
 ---
-
-**Referensi tambahan:**
-- [Basic Writing and Syntax on Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Contoh readme](https://github.com/fahmimnalfrzki/Swift-XRT-Automation)
-- [Another example](https://github.com/sanggusti/final_bangkit) (**Must read**)
-- [Additional reference](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)

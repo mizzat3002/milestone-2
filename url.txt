@@ -1,0 +1,1 @@
+url hf: https://huggingface.co/spaces/mizzat3002/Stroke-Prediction

@@ -1,0 +1,15 @@
+1.Bagging
+Latar belakang : bagging adalah metode untuk mengatasi model yang overfitting, dan mengatasi data yang imbalanced
+Cara kerja : 
+-Bootstrapping: Data asli di sampling acak dengan pengembalian menjadi beberapa subset data
+-Aggregating: Setiap subset dilatih pada modelnya masing-masing secara paralel. Hasil akhir digabungkan lewat suara terbanyak (voting untuk klasifikasi) atau rata-rata (untuk regresi)
+
+2. Perbedaan Random Forest vs Gradient Boosting
+- Random Forest :
+melatih banyak pohon sekaligus dengan mandiri, biar pohonnya gak mirip semua, setiap cabang pohon cuma boleh milih fitur secara acak
+
+- Gradient Boosting :
+melatih pohon secara berurutan, pohon baru yang dihasilkan bertugas memperbaiki kesalahan dari pohon sebelumnya
+
+3. Apa itu Cross Validation?
+- adalah teknik evaluasi model untuk memastikan performanya stabil dan tidak overfit dengan cara memutar posisi data training 
