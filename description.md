@@ -24,6 +24,7 @@ semua  model dibangun pakai pipeline, dievaluasi pakai cross validation dengan m
 
 ## Stacks
 Bahasa : python
+
 Library ; Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Joblib
 
 ## Reference

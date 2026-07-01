@@ -39,7 +39,6 @@ def run():
     ax_umur.set_xlabel('Umur Pasien (Tahun)')
     ax_umur.set_ylabel('Jumlah Pasien')
  
-    # Masukkan objek fig_umur ke st.pyplot
     st.pyplot(fig_umur)
 
     # membuat plot histogram untuk kelompok umur 
